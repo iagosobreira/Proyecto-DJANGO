@@ -1,0 +1,52 @@
+# Python
+*.py[cod]
+*$py.class
+__pycache__/
+*.py[cod]
+__pycache__/
+
+# Entorno virtual
+myenv/
+venv/
+ENV/
+env/
+
+# Entorno
+.env
+.env.local
+
+# Base de datos
+db.sqlite3
+*.sqlite3
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+staticfiles/
+
+# Compiled template files
+*.tmpl
+
+# Coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
