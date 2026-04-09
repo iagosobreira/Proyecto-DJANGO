@@ -6,20 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/output.css' %}">
+
+    <style>
+        .nav-active {
+            border-bottom: 2px solid white !important; 
+            font-weight: bold;
+        }
+
+        .nav-link-custom {
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
     <nav class="bg-blue-600 text-white p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold">Proyecto Django</h1>
             <ul class="flex space-x-4">
-                <li><a href="/." class="hover:text-violet-700">Inicio</a></li>
-                <li><a href="/blog" class="hover:text-violet-700">Blog</a></li>
-                <li><a href="/servicios" class="hover:text-violet-700">Servicios</a></li>
-                <li><a href="/tienda" class="hover:text-violet-700">Tienda</a></li>
+                <li>
+                    <a href="{% url 'Home' %}" 
+                    class="nav-link-custom hover:text-violet-700 {% if request.resolver_match.url_name == 'Home' %}nav-active{% endif %}">
+                    Inicio
+                    </a>
+                </li>
+                <li><a href="{% url 'Blog' %}" class="nav-link-custom hover:text-violet-700 {% if request.resolver_match.url_name == 'Blog' %}nav-active{% endif %}">Blog</a></li>
+                <li><a href="{% url 'Servicios' %}" class="nav-link-custom hover:text-violet-700 {% if request.resolver_match.url_name == 'Servicios' %}nav-active{% endif %}">Servicios</a></li>
+                <li><a href="{% url 'Tienda' %}" class="nav-link-custom hover:text-violet-700 {% if request.resolver_match.url_name == 'Tienda' %}nav-active{% endif %}">Tienda</a></li>
             </ul>
         </div>
     </nav>
-
     <main class="container mx-auto mt-8 p-4">
         {% block content %}{% endblock %}
     </main>
