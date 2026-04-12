@@ -12,6 +12,3 @@ def tienda(request):
     
     return render(request, "ProyectoDjangoApp/tienda.html")
 
-def blog(request):
-    
-    return render(request, "ProyectoDjangoApp/blog.html")

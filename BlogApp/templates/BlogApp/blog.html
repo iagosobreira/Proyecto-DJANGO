@@ -1,0 +1,21 @@
+{% extends 'ProyectoDjangoApp/base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+    <h1>Blog</h1>
+
+    {% for post in posts %}
+    
+        <p>{{post.titulo}}</p>
+        <p>{{post.contenido}}</p>
+        <p>{{post.categoria}}</p>
+
+        {% if post.imagen %}
+            <img src="{{post.imagen.url}}">
+        {% endif %}
+
+    {% endfor %}
+
+
+{% endblock %}
