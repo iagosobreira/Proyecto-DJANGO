@@ -6,9 +6,7 @@ def home(request):
     
     return render(request, "ProyectoDjangoApp/home.html")
 
-def servicios(request):
-    
-    return render(request, "ProyectoDjangoApp/servicios.html")
+
 
 def tienda(request):
     

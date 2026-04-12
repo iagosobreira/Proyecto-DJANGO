@@ -13,6 +13,7 @@ venv/
 ENV/
 env/
 .venv/
+.env3/
 
 # Variables de entorno
 .env
@@ -30,6 +31,7 @@ media/
 staticfiles/
 static/
 .django/
+
 
 # Traducciones
 *.pot
@@ -61,3 +63,8 @@ Thumbs.db
 
 # npm/node (si usas Tailwind/frontend)
 node_modules/
+package-lock.json
+yarn.lock
+
+# mkdocs/docs
+site/
