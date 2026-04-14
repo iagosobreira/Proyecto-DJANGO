@@ -1,5 +1,5 @@
 {% extends 'ProyectoDjangoApp/base.html' %}
-
+{% load static %}
 {% block title %}Blog{% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
                 {% if post.imagen %}
                     <img class="w-full rounded-2xl" src="{{post.imagen.url}}">
                 {% else %}
-                    <img class="w-full rounded-2xl" src="../static/img/blog_estandar.png">
+                    <img class="w-full rounded-2xl" src="{% static 'img/blog_estandar.png' %}">
                 {% endif %}
                 <div class="text-center">
                     <p class="font-bold">{{post.titulo}}</p>
@@ -22,14 +22,5 @@
         {% endfor %}
     </section>
 
-    <section class="mt-10">
-        <div class="flex flex-col items-center justify-center">
-            <p class="font-bold text-2xl">Categorías:</p> 
-            {% for categoria in categorias %}
-                <a href="categoria/{{categoria.id}}" class=" font-medium transition-all duration-700 hover:text-blue-600"><p>{{categoria.nombre}}</p></a>
-            {% endfor %}
-
-        </div>
-    </section>
 
 {% endblock %}
