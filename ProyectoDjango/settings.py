@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ProyectoDjangoApp',
     'ServiciosApp',
     'BlogApp',
+    'TiendaApp',
 ]
 
 MIDDLEWARE = [

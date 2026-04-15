@@ -1,4 +1,4 @@
-{% extends 'ProyectoDjangoApp/base.html' %}
+{% extends 'ProyectoDjango/base.html' %}
 
 {% block title %}Blog{% endblock %}
 
@@ -26,9 +26,8 @@
         <div class="flex flex-col items-center justify-center">
             <p class="font-bold text-2xl">Categorías:</p> 
             {% for categoria in categorias %}
-                <a href="categoria/{{categoria.id}}" class=" font-medium transition-all duration-700 hover:text-blue-600"><p>{{categoria.nombre}}</p></a>
+                <a href="categoria/{{categoria.id}}" class=" underline font-medium transition-all duration-700 hover:text-blue-600"><p>{{categoria.nombre}}</p></a>
             {% endfor %}
-
         </div>
     </section>
 

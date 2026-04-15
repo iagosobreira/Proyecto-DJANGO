@@ -31,7 +31,7 @@
                     Inicio
                     </a>
                 </li>
-                <li><a href="{% url 'Blog' %}" class="nav-link-custom hover:text-violet-700 {% if request.resolver_match.url_name == 'Blog' %}nav-active{% endif %}">Blog</a></li>
+                <li><a href="{% url 'Blog' %}" class="nav-link-custom hover:text-violet-700 {% if 'blog' in request.path or 'categoria' in request.path %} nav-active {% endif %}">Blog</a></li>
                 <li><a href="{% url 'Servicios' %}" class="nav-link-custom hover:text-violet-700 {% if request.resolver_match.url_name == 'Servicios' %}nav-active{% endif %}">Servicios</a></li>
                 <li><a href="{% url 'Tienda' %}" class="nav-link-custom hover:text-violet-700 {% if request.resolver_match.url_name == 'Tienda' %}nav-active{% endif %}">Tienda</a></li>
             </ul>

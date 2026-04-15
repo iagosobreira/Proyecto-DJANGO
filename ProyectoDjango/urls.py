@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('servicios/', include('ServiciosApp.urls')),
     path('blog/',include('BlogApp.urls') ),
+    path('tienda/',include('TiendaApp.urls') ),
     path('', include('ProyectoDjangoApp.urls')),
     
 ]
